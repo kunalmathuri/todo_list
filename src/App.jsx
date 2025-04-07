@@ -4,7 +4,7 @@ import "./App.css";
 function App() {
   const [count, setCount] = useState(0);
 
-  return <>Kunal todo_list</>;
+  return <>Kunal todo</>;
 }
 
 export default App;
