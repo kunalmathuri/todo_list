@@ -1,10 +1,27 @@
+import TodoList from "./components/TodoList/TodoList";
+import AddTodo from "./components/AddTodo/AddTodo";
 import { useState } from "react";
-import "./App.css";
+import TodoContext from "./components/context/TodoContext";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [list, setList] = useState([
+    { id: 1, todoData: "todo 1", finished: false },
+    { id: 2, todoData: "todo 2", finished: true },
+  ]);
 
-  return <>Kunal todo</>;
+  return (
+    <TodoContext.Provider value={{ list, setList }}>
+      <AddTodo
+        updateList={(todo) =>
+          setList([
+            ...list,
+            { id: list.length + 1, todoData: todo, finished: false },
+          ])
+        }
+      />
+      <TodoList />
+    </TodoContext.Provider>
+  );
 }
 
 export default App;
