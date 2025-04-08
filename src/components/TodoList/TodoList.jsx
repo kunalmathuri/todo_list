@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import Todo from "../Todo/Todo";
-import TodoContext from "../context/TodoContext";
-import TodoDispatchContext from "../context/TodoDispatchContext";
+import TodoContext from "../../context/TodoContext";
+import TodoDispatchContext from "../../context/TodoDispatchContext";
 
 function TodoList({}) {
   const { list } = useContext(TodoContext);

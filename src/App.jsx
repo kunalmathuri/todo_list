@@ -1,9 +1,9 @@
 import TodoList from "./components/TodoList/TodoList";
 import AddTodo from "./components/AddTodo/AddTodo";
+import TodoContext from "./context/TodoContext";
+import todoReducer from "./reducers/todoReducer";
+import TodoDispatchContext from "./context/TodoDispatchContext";
 import { useReducer } from "react";
-import TodoContext from "./components/context/TodoContext";
-import todoReducer from "./components/reducers/todoReducer";
-import TodoDispatchContext from "./components/context/TodoDispatchContext";
 
 function App() {
   const [list, dispatch] = useReducer(todoReducer, []);
