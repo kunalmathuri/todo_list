@@ -1,9 +1,9 @@
-import { useContext, useState } from "react";
-import TodoDispatchContext from "../../context/TodoDispatchContext";
-
+import { useState } from "react";
+import { useDispatch } from "react-redux";
 function AddTodo() {
+  const dispatch = useDispatch();
+
   const [inputText, setInputText] = useState("");
-  const { dispatch } = useContext(TodoDispatchContext);
   return (
     <div>
       <input

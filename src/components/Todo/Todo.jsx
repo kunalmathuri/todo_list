@@ -15,7 +15,6 @@ function Todo({ todoData, isFinished, changeFinished, onDelete, onEdit }) {
           changeFinished(e.target.checked);
         }}
       />
-
       {isEditing ? (
         <input
           type="text"
